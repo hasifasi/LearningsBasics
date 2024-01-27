@@ -1,0 +1,4 @@
+2/Book/false/0.25
+3/TabletMotrin/true/14.67
+5/Choculate/true/23
+2/Shoes/false/44.44
