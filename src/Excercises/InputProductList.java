@@ -33,7 +33,7 @@ public class InputProductList {
 		
 		System.out.println("Choose an option:");
 		System.out.println("1. Upload");
-		System.out.println("2. Enter something else");
+		System.out.println("2. Enter Product details");
 
 		
 		int choice = scanner.nextInt();

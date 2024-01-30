@@ -15,11 +15,11 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 
-		// SuperMarket(getCustmerName());
+		 SuperMarket(getCustmerName());
 
-		// onlineStore(getCustmerName());
+		 //onlineStore(getCustmerName());
 		
-		retailStore(getCustmerName());
+		//retailStore(getCustmerName());
 
 	}
 
@@ -34,6 +34,15 @@ public class Main {
 		sugarList.add("Juice");
 		sugarList.add("Pastries");
 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Choose an option:");
+        System.out.println("1. Individual");
+        System.out.println("2. Corporate");
+
+        int type = sc.nextInt();
+        sc.nextLine(); 
+		
+		
 		ArrayList<HashMap> finalBill = new ArrayList<HashMap>();
 		HashMap<String, Double> finalPrice = new HashMap<String, Double>();
 		HashMap<String, Double> calcTax = new HashMap<String, Double>();
@@ -58,8 +67,9 @@ public class Main {
 
 				double productCost = quantity * price;
 				boolean isMedicine = medicinesList.contains(product) ? true : false;
+				boolean isSuagr = sugarList.contains(product) ? true : false;
 
-				calculatedTax = t.calculateTotalTax(isMedicine, isImported, productCost);
+				calculatedTax = t.calculateTotalTax(isMedicine,isSuagr, isImported, productCost,type);
 //				System.out.println("calculatedTax: " + calculatedTax);
 //				System.out.println("productCost:" + productCost);
 
